@@ -1,16 +1,16 @@
 import React from "react";
-import styled from 'styled-components';
+import { styled } from '@material-ui/core/styles';
 import axios from 'axios';
 const randomstring = require('randomstring');
 
-const Div = styled.div`
-    margin-right: auto;
-    margin-left: auto;
-    width: 20%;
-`
-const Button = styled.button`
-    margin-left: 12.5%;
-`
+const Div = styled('div')({
+    width: '20%',
+    margin: 'auto',
+})
+const Button = styled('button')({
+    margin: 'auto'
+})
+
 class LikeButton extends React.Component {
     state = { 
         value: ""
@@ -40,7 +40,7 @@ class LikeButton extends React.Component {
     {
         const newURL = "http://localhost:3000/" + randomstring.generate(6);
         await axios.post('http://localhost:1337/posts', { originalURL: this.state.originalURL, newURL })
-        this.setState({ newURL, newURLMessage: "Here Is your new URL!:" });
+        this.setState({ newURL, newURLMessage: "Here Is your new shorter URL!:" });
     }
 
     //Used to redirect to new URL if there's a suitable pathname
