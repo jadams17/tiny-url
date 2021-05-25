@@ -1,4 +1,4 @@
-Project to go with [https://github.com/jadams17/tiny-url-api] to create a URL shortener using Material UI, axios, React and Strapi. 
+Project to go with [https://github.com/jadams17/tiny-url-api] to create a URL shortener using Material UI, axios and React. 
 
 ## Available Scripts
 
